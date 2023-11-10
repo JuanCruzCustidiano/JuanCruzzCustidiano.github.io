@@ -1,4 +1,68 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/extends';
+
 @import url(../css/styles.css);
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $color-fondo;
+  color: $color-texto;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: linear-gradient(to top, #004B8D, #32CD32);
+  text-align: center;
+  padding: 20px 0;
+
+  .header__content {
+    @include box-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+    @extend .flex-container;
+    padding: 0 $espaciado;
+
+    .logo {
+      max-width: 100%;
+      height: auto;
+      max-height: 100px;
+    }
+  }
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  nav li {
+    display: inline;
+    margin: 0 $espaciado;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $espaciado;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: $espaciado;}
+
+  .titulos-index {
+    font-size: 32px;
+    margin: 0;
+    padding-bottom: $espaciado;
+  }
 $color-primario: #3498db;
 $color-fondo: #f5f5f5;
 $color-texto: #333;
